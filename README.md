@@ -1,7 +1,7 @@
 # Item Catalog Project
 A web application that creates a restaurant menu web app where users can add, edit, and delete restaurants and menu items in the restaurants.
 
-###Few Notable Features:
+## Features:
 - Authorization is implemented at all levels, i.e restaurants and menu items.
 - App is easy to eyes and easy to read, keeping in mind users start to read from left to right and top to bottom
 
@@ -13,8 +13,11 @@ A web application that creates a restaurant menu web app where users can add, ed
 
 ### How to Run
 1. Download and Install VirtualBox and Vagrant
+
 2. Clone or download this repository
+
 3. Navigate into the directory
+
 4. Launch Vagrant
 ```
 $ Vagrant up 
@@ -64,5 +67,6 @@ $ Python project.py
 Credits for all my learning and basic code flow goes to Udacity, credits to growth each day goes to mistakes and errors made and corrected during the Iterative Development process, mixed credits to google search, udacity knowledge and stack overflow. Thank you!
 
 Credits for Google Login Button:
+
 https://knowledge.udacity.com/questions/33509
 https://gist.github.com/shyamgupta/d8ba035403e8165510585b805cf64ee6
