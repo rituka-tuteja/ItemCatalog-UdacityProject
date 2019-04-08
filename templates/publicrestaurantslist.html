@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+
+<body style="text-align: center">
+
+    <a href = '{{url_for('showLogin') }}'>LOGIN</a>
+
+    <h1>RESTAURANTS</h1>
+
+    
+    {% for i in restaurants %}
+
+    <div class="lists">
+
+        <p>{{i.name}}</p>
+
+            <a href='{{url_for('restaurantMenu', restaurant_id = i.id) }}'>View Menu</a>
+
+            </br>
+
+            </br>
+        </div>
+
+    </div>
+
+    {% endfor %}
+        
+</body>
+
+</html>
