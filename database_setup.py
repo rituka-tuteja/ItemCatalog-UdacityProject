@@ -12,6 +12,9 @@ Base = declarative_base()
 
 # class for the User table
 class User(Base):
+    """
+    Registered user information is stored in db
+    """
     __tablename__ = 'user'
 
     id = Column(Integer, primary_key=True)
@@ -22,6 +25,9 @@ class User(Base):
 
 # class for the Restaurant table
 class Restaurant(Base):
+    """
+    Restaurants information is stored in db
+    """
     __tablename__ = 'restaurant'
 
     name = Column(String(80), nullable = False)
@@ -42,6 +48,9 @@ class Restaurant(Base):
 
 # class for Menu Items table
 class MenuItem(Base):
+    """
+    Restaurant menu items are stored in db
+    """
     __tablename__ = 'menu_item'
 
     name = Column(String(80), nullable = False)
