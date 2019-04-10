@@ -6,9 +6,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
 
-#from sqlalchemy.orm import sessionmaker
-
 Base = declarative_base()
+
 
 # class for the User table
 class User(Base):
@@ -30,8 +29,8 @@ class Restaurant(Base):
     """
     __tablename__ = 'restaurant'
 
-    name = Column(String(80), nullable = False)
-    id = Column(Integer, primary_key = True)
+    name = Column(String(80), nullable=False)
+    id = Column(Integer, primary_key=True)
 
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
@@ -53,8 +52,8 @@ class MenuItem(Base):
     """
     __tablename__ = 'menu_item'
 
-    name = Column(String(80), nullable = False)
-    id = Column(Integer, primary_key = True)
+    name = Column(String(80), nullable=False)
+    id = Column(Integer, primary_key=True)
     course = Column(String(250))
     description = Column(String(250))
     price = Column(String(8))
@@ -64,7 +63,6 @@ class MenuItem(Base):
 
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
-
 
     # To send JSON objects in a serializable format
     @property
@@ -76,8 +74,9 @@ class MenuItem(Base):
             'id': self.id,
             'price': self.price,
             'course': self.course,
-        }    
-    
+        }
+
+
 engine = create_engine('sqlite:///restaurantmenu.db')
 
 Base.metadata.create_all(engine)
